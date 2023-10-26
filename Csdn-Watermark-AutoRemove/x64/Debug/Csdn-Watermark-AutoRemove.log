@@ -1,0 +1,3 @@
+﻿  main.cpp
+E:\Project-table\c++project\Csdn-Watermark-AutoRemove\Csdn-Watermark-AutoRemove\main.cpp(44,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Csdn-Watermark-AutoRemove.vcxproj -> E:\Project-table\c++project\Csdn-Watermark-AutoRemove\x64\Debug\Csdn-Watermark-AutoRemove.exe

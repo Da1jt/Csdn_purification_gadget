@@ -1,0 +1,7 @@
+﻿E:\vs 1\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中间目录(x64\Release\)包含从另一个项目(Csdn-Watermark-AutoRemove.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  main.cpp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 137 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Csdn-Watermark-AutoRemove.vcxproj -> E:\Project-table\c++project\Csdn-Watermark-AutoRemove\x64\Release\CSDN-Purify.exe
