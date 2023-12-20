@@ -1,7 +1,8 @@
-
+#include <iostream>
 #include <Windows.h>
 #include <shellapi.h>
 #include <regex>
+#include <string>
 #include <thread>
 #include <Psapi.h>
 using namespace std;
@@ -81,6 +82,7 @@ void clipb() {
 		catch (exception ex)
 		{
 		}
+		
 		Sleep(500);
 	}
 }
@@ -140,17 +142,17 @@ void ShowContextMenu(HWND hwnd)
 	TrackPopupMenu(g_menu, TPM_LEFTALIGN | TPM_RIGHTBUTTON, pt.x, pt.y, 0, hwnd, NULL);
 }
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+int main(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	//HWND self = GetForegroundWindow();
-	//ShowWindow(self, 0);
+	HWND self = GetForegroundWindow();
+	ShowWindow(self, 0);
 	const wchar_t className[] = L"mainc";
 	WNDCLASS wc = {};
 	wc.lpfnWndProc = WindowProc;
 	wc.hInstance = hInstance;
 	wc.lpszClassName = className;
 	RegisterClass(&wc);
-	CreateWindowEx(0, className, L"Csdn_SharePlate", 0, 0, 0, 0, 0,NULL, NULL, hInstance, NULL);
+	HWND hwnd = CreateWindowEx(0, className, L"Csdn_SharePlate", 0, 0, 0, 0, 0,NULL, NULL, hInstance, NULL);
 	MSG msg;
 	thread thread1(clipb);
 	while (GetMessage(&msg, NULL, 0, 0) > 0)
