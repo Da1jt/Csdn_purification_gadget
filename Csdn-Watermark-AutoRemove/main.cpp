@@ -1,8 +1,7 @@
-#include <iostream>
+
 #include <Windows.h>
 #include <shellapi.h>
 #include <regex>
-#include <string>
 #include <thread>
 #include <Psapi.h>
 using namespace std;
@@ -82,8 +81,7 @@ void clipb() {
 		catch (exception ex)
 		{
 		}
-		
-		Sleep(500);
+		Sleep(1000);
 	}
 }
 void HandleMenuCommand(HWND hwnd, WPARAM wParam)
@@ -152,7 +150,7 @@ int main(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmd
 	wc.hInstance = hInstance;
 	wc.lpszClassName = className;
 	RegisterClass(&wc);
-	HWND hwnd = CreateWindowEx(0, className, L"Csdn_SharePlate", 0, 0, 0, 0, 0,NULL, NULL, hInstance, NULL);
+	CreateWindowEx(0, className, L"Csdn_SharePlate", 0, 0, 0, 0, 0,NULL, NULL, hInstance, NULL);
 	MSG msg;
 	thread thread1(clipb);
 	while (GetMessage(&msg, NULL, 0, 0) > 0)
