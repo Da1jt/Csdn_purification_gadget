@@ -68,7 +68,7 @@ void clipb() {
 		size_t textLength = clipboardText.length();
 		try
 		{
-			wstring target = L"版权声明：本文为CSDN博主";
+			wstring target = L"鐗堟潈澹版槑锛氭湰鏂囦负CSDN鍗氫富";
 
 			for (int i = 0; i < textLength - 14; i++) {
 				wstring slp = clipboardText.substr(i, 14);
